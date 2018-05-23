@@ -55,7 +55,7 @@ export class MyApp {
     const pushObject: PushObject = this.push.init(options);
 
     pushObject.on('registration').subscribe((registration: any) => {
-        //at this point you can send your token to your server, you would need it
+        //at this point you can send the device token to your server, you would need it
         console.log('Device registered - ' + registration.registrationId);
     });
 
@@ -74,7 +74,7 @@ export class MyApp {
       text: 'View',
       handler: () => {
 
-          //add page to want the user to be redirected to
+          //push to notification page
           this.nav.push(YOUR_PAGE);
       }
       }]
